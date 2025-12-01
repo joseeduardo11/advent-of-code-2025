@@ -95,35 +95,6 @@ from pathlib import Path
 script_dir = Path(__file__).parent
 content = (script_dir / 'input.txt').read_text()
 
-""" if __name__ == '__main__':
-    actual_pos = 50
-    password = 0
-    # Split content into lines
-    lines = content.strip().split('\n')
-#   lines = ['L68','L30','R48','L5','R60','L55','L1','L99','R14','L82']
-    # Process each line
-    for line in lines:
-        direction, distance = line[0], int(line[1:])
-       
-        if direction == 'R':
-            # Moving right: count how many times we cross 0
-            # Starting from actual_pos, we cross 0 at positions 100, 200, 300, etc.
-            crosses = (actual_pos + distance) // 100
-            password += crosses
-            actual_pos = (actual_pos + distance) % 100
-
-        elif direction == 'L':
-            # Moving left: count how many times we cross 0
-            # We cross 0 going backwards from actual_pos
-            new_pos = actual_pos - distance
-            if new_pos < 0:
-                # We crossed 0 at least once
-                crosses = (abs(new_pos) + 99) // 100
-                password += crosses
-            actual_pos = new_pos % 100
-    
-    print(password)
- """
 
 def count_zeros_in_rotation(start_pos, direction, steps):
     """
