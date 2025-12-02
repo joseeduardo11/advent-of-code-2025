@@ -181,7 +181,6 @@ R14
 L82"""
 
 print("Example:")
-
 result = solve(content)
 print(f"\nTotal times dial points at 0: {result}")
 print("\n" + "="*50)
